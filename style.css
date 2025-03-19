@@ -1,0 +1,13 @@
+/* fieldset{
+  
+} */
+
+label,input:not([name="read"]),select{
+    display:block;
+    padding:1ch;
+}
+
+button:not([id="openAddBook"]){
+    float:right;
+    padding: auto;
+}
