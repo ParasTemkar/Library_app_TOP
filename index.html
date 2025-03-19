@@ -14,24 +14,24 @@
    
     <button id="openAddBook">Add new book</button>
     <dialog id="addBook">
-        <form id="survey-form" action="/submit" method="POST">
+        <form id="book-form" action="/submit" method="POST">
             <fieldset> 
             <legend>Book details</legend>
-            <label id="title-label" for="title" >Title: </label>
-            <input required placeholder="Enter book name" id="title" type="text" min-length="1" max-length="130">
+            <label id="title-label" for="title">Title: </label>
+            <input required placeholder="Enter book name" id="title" type="text"  name="title"  min-length="1" max-length="130">
             
-            <label id="author-label" for="author" >Author: </label>
-            <input required placeholder="Enter author name" id="author" type="text" min-length="1" max-length="130">
+            <label id="author-label" for="author">Author: </label>
+            <input required placeholder="Enter author name" id="author" type="text" name="author" min-length="1" max-length="130">
             
             <label id="pages-label" for="pages" >Number of pages: </label>
-            <input id="pages" type="number">
+            <input id="pages" type="number" name="pages">
             
             <label id="read-label" for="read" >Have you read?: </label>
-            Yes<input type="radio" name="yes-no" value="yes">
-            No<input type="radio" name="yes-no" value="no">
+            Yes<input type="radio" class="read" name="read" value="yes">
+            No<input type="radio" class="read" name="read" value="no">
 
-            <label for="genreDropdown" id="genere-label"></label>
-            <select id="genreDropdown">
+            <label for="genre" id="genre-label" ></label>
+            <select id="genre" name="genre">
                 <option value="" disabled selected>Select</option>
                 <option value="romance">Romance</option>
                 <option value="fiction">Fiction</option>
