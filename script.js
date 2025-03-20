@@ -23,7 +23,23 @@ const closeAddBook = document.querySelector('#closeAddBook');
 openAddBook.addEventListener('click', ()=> addBook.showModal());
 closeAddBook.addEventListener('click', ()=> addBook.close());
 
+// To make books visible in display.
+
 function displayBooks(){
+  const bookList = document.getElementById("display");
+  bookList.innerHTML = "";
+
+  for(let book of myLibrary) {
+    const bookDiv = document.createElement("div");
+    bookDiv.classList.add("bookBlock");
+
+    bookDiv.innerHTML = 
+    `<p><strong>${book.title}</strong> by ${book.author}</p>
+    <p>Pages: ${book.pages} | Genre: ${book.genre} | Read: ${book.read ? "Yes" : "No"}</p>`;
+    bookList.appendChild(bookDiv);
+  }
+}
+
 // To accept form data and add into Library.
 document.getElementById("book-form").addEventListener("submit", (event) => {
   event.preventDefault();
