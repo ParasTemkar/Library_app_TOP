@@ -11,3 +11,14 @@ button:not([id="openAddBook"]){
     float:right;
     padding: auto;
 }
+
+#display{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 1ch;
+    padding: 1ch;
+    border: 1px solid black;
+    margin: 1ch;
+    overflow: auto;
+}

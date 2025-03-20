@@ -23,6 +23,7 @@ const closeAddBook = document.querySelector('#closeAddBook');
 openAddBook.addEventListener('click', ()=> addBook.showModal());
 closeAddBook.addEventListener('click', ()=> addBook.close());
 
+function displayBooks(){
 // To accept form data and add into Library.
 document.getElementById("book-form").addEventListener("submit", (event) => {
   event.preventDefault();
@@ -37,5 +38,7 @@ document.getElementById("book-form").addEventListener("submit", (event) => {
   myLibrary.push(newBook);
 
   console.log(myLibrary);
+  displayBooks(); 
 });
+
 
