@@ -1,44 +1,88 @@
-
-
-label,input:not([name="read"]),select{
-    display:block;
-    padding:1ch;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
 }
 
-button:not([id="openAddBook"]){
-    float:right;
-    padding: auto;
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+main {
+    padding: 2em;
+}
+
+label, input:not([name="read"]), select {
+    display: block;
+    padding: 1ch;
+    margin-bottom: 1em;
+}
+
+button {
+    padding: 0.5em 1em;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin: 2ch;
+}
+
+button:not([id="openAddBook"]):hover {
+    background-color: #45a049;
 }
 
 /* =============== Display styling =============== */
-#display{
+#display {
     border: 1px solid black;
     margin: 1ch;
     overflow: auto;
     min-height: 10vh;
     max-height: 80vh;
+    background-color: white;
+    padding: 1em;
 }
+
 /* .listDisplay{
 
 } */
 
-.gridDisplay{
-    display:grid;
-    grid-template-columns: repeat(auto-fill, minmax(20ch, 1fr));
-    grid-template-rows: repeat(auto-fill, minmax(20ch, 1fr));
-    grid-gap: 1ch;
-    padding: 1ch;
+.gridDisplay {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 5px;
+    padding: 1em;
+    justify-content: center;
+    overflow: auto;
 }
 
 /* =============== Book styling =============== */
-.bookBlock{
+.bookBlock {
     border: 1px solid black;
     overflow: auto;
+    background-color: #f0f8ff; 
+    color: #000; 
+    padding: 10px; 
+    margin: 5px; 
+    box-sizing: border-box; 
 }
-.listView{
+
+.listView {
     padding: 1ch;
-}   
-.gridView{
-    width: 2fr;
-    height: 1fr;
+    background-color: #e6e6fa; 
+    color: #000;
+}
+
+.gridView {
+    width: 100%; 
+    height: 250px;
+    background-color: #fffacd;
+    color: #000;
+    border-radius: 10px; 
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1); 
+    padding: 15px;
 }
