@@ -1,6 +1,4 @@
-/* fieldset{
-  
-} */
+
 
 label,input:not([name="read"]),select{
     display:block;
@@ -12,13 +10,35 @@ button:not([id="openAddBook"]){
     padding: auto;
 }
 
+/* =============== Display styling =============== */
 #display{
-    display:grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-gap: 1ch;
-    padding: 1ch;
     border: 1px solid black;
     margin: 1ch;
     overflow: auto;
+    min-height: 10vh;
+    max-height: 80vh;
+}
+/* .listDisplay{
+
+} */
+
+.gridDisplay{
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(20ch, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(20ch, 1fr));
+    grid-gap: 1ch;
+    padding: 1ch;
+}
+
+/* =============== Book styling =============== */
+.bookBlock{
+    border: 1px solid black;
+    overflow: auto;
+}
+.listView{
+    padding: 1ch;
+}   
+.gridView{
+    width: 2fr;
+    height: 1fr;
 }

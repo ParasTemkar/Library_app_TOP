@@ -32,6 +32,7 @@ function displayBooks(){
   for(let book of myLibrary) {
     const bookDiv = document.createElement("div");
     bookDiv.classList.add("bookBlock");
+    bookDiv.classList.add("listView");
 
     bookDiv.innerHTML = 
     `<p><strong>${book.title}</strong> by ${book.author}</p>
@@ -57,4 +58,23 @@ document.getElementById("book-form").addEventListener("submit", (event) => {
   displayBooks(); 
 });
 
+// To toggle between list and grid view.
 
+document.getElementById("changeView").addEventListener("click", () => {
+
+  const bookList = document.getElementById("display");
+  if (bookList.classList.contains("listDisplay")) {
+    bookList.classList.remove("listDisplay");
+    bookList.classList.add("gridDisplay");
+
+    bookBlock.classList.remove("listView");
+    bookBlock.classList.add("gridView");
+
+  } else {
+    bookList.classList.remove("gridDisplay");
+    bookList.classList.add("listDisplay");
+
+    bookBlock.classList.remove("listView");
+    bookBlock.classList.add("gridView");
+  }
+});
