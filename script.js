@@ -36,7 +36,9 @@ function displayBooks(){
 
     bookDiv.innerHTML = 
     `<p><strong>${book.title}</strong> by ${book.author}</p>
-    <p>Pages: ${book.pages} | Genre: ${book.genre} | Read: ${book.read ? "Yes" : "No"}</p>`;
+    <p>Pages: ${book.pages}</p>
+    <p>Genre: ${book.genre}</p>
+    <p>Read: ${book.read ? "Yes" : "No"}</p>`;
     bookList.appendChild(bookDiv);
   }
 }
